@@ -1,4 +1,4 @@
-# Falk's personal website
+# Falk's Personal Website
 
 Inspired by a business card.
 
