@@ -67,6 +67,8 @@ const Home: NextPage = () => {
                     key={text as string}
                     className='flex items-center gap-5 group'
                     href={url as string}
+                    target='_blank'
+                    rel='noopener noreferrer'
                   >
                     <div className='grid w-12 h-12 transition duration-300 bg-gray-200 rounded-full place-content-center lg:text-lg group-hover:bg-gray-300'>
                       {icon}
