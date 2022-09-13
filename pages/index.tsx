@@ -18,7 +18,11 @@ const Home: NextPage = () => {
       '/falkmarinov',
       'https://www.linkedin.com/in/falkmarinov',
     ],
-    [<BsFillPersonFill key={'person-icon'} />, 'personal resume', ''],
+    [
+      <BsFillPersonFill key={'person-icon'} />,
+      'personal resume',
+      '/documents/personal-resume-german.pdf',
+    ],
   ];
 
   const sequence = [
