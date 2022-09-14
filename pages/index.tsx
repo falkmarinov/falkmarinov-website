@@ -47,7 +47,7 @@ const Home: NextPage = () => {
         <meta name='description' content='Personal website of Falk Marinov' />
       </Head>
 
-      <main className='h-screen font-mono sm:text-xl lg:text-2xl'>
+      <main className='h-screen font-mono selection:bg-gray-300 sm:text-xl lg:text-2xl'>
         <div className='h-full lg:columns-2 lg:gap-0'>
           {/* left section */}
           <div className='grid bg-gray-200 bg-repeat place-content-center h-1/2 lg:h-full bg-circuit-board'>
