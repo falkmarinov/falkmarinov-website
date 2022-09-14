@@ -20,7 +20,7 @@ const Home: NextPage = () => {
     ],
     [
       <BsFillPersonFill key={'person-icon'} />,
-      'personal resume',
+      'personal resume (german)',
       '/documents/personal-resume-german.pdf',
     ],
   ];
