@@ -21,7 +21,7 @@ export const CharacterContainer = ({
   isHovered = false,
 }: CharacterContainerProps) => {
   const classNames = cn(
-    'grid w-12 h-12 bg-gray-200 rounded-full place-content-center lg:text-lg',
+    'grid w-12 h-12 transition duration-300 bg-gray-200 rounded-full place-content-center lg:text-lg',
     { 'bg-gray-300': isHovered }
   );
 
