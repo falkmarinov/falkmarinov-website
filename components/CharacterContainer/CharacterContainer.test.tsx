@@ -1,26 +1,26 @@
 import { render, screen } from '@testing-library/react';
-import { IconContainer } from './IconContainer';
+import { CharacterContainer } from './CharacterContainer';
 
-describe('<IconContainer />', () => {
+describe('<CharacterContainer />', () => {
   it('should render', () => {
-    render(<IconContainer>I</IconContainer>);
+    render(<CharacterContainer>I</CharacterContainer>);
   });
 
-  describe('default', () => {
+  describe('Default', () => {
     it('should be bg-gray-200', () => {
-      render(<IconContainer>I</IconContainer>);
+      render(<CharacterContainer>I</CharacterContainer>);
       expect(screen.getByText('I')).toHaveClass('bg-gray-200');
     });
 
     it('should be a circle', () => {
-      render(<IconContainer>I</IconContainer>);
+      render(<CharacterContainer>I</CharacterContainer>);
       expect(screen.getByText('I')).toHaveClass('rounded-full');
     });
   });
 
   describe('prop: isHovered', () => {
     it('should be bg-gray-300', () => {
-      render(<IconContainer isHovered>I</IconContainer>);
+      render(<CharacterContainer isHovered>I</CharacterContainer>);
       expect(screen.getByText('I')).toHaveClass('bg-gray-300');
     });
   });

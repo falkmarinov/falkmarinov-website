@@ -2,9 +2,9 @@ import React from 'react';
 
 import cn from 'classnames';
 
-interface IconContainerProps {
+interface CharacterContainerProps {
   /**
-   * Icon which should be rendered
+   * Character which should be shown
    */
   children: React.ReactNode;
   /**
@@ -16,10 +16,10 @@ interface IconContainerProps {
 /**
  * Container with shaped background
  */
-export const IconContainer = ({
+export const CharacterContainer = ({
   children,
   isHovered = false,
-}: IconContainerProps) => {
+}: CharacterContainerProps) => {
   const classNames = cn(
     'grid w-12 h-12 bg-gray-200 rounded-full place-content-center lg:text-lg',
     { 'bg-gray-300': isHovered }

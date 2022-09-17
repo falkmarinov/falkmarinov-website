@@ -3,19 +3,19 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { VscSmiley } from 'react-icons/vsc';
 
-import { IconContainer } from './IconContainer';
+import { CharacterContainer } from './CharacterContainer';
 
 export default {
-  title: 'Container/IconContainer',
-  component: IconContainer,
+  title: 'Container/CharacterContainer',
+  component: CharacterContainer,
   args: { children: <VscSmiley /> },
   argTypes: {
     children: { control: false },
   },
-} as ComponentMeta<typeof IconContainer>;
+} as ComponentMeta<typeof CharacterContainer>;
 
-const Template: ComponentStory<typeof IconContainer> = (args) => (
-  <IconContainer {...args} />
+const Template: ComponentStory<typeof CharacterContainer> = (args) => (
+  <CharacterContainer {...args} />
 );
 
 export const Default = Template.bind({});
