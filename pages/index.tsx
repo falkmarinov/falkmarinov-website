@@ -6,6 +6,8 @@ import { GrMail } from 'react-icons/gr';
 import { BsFillPersonFill } from 'react-icons/bs';
 import { TypeAnimation } from 'react-type-animation';
 
+import Title from '../components/Title';
+
 const Home: NextPage = () => {
   const links: (JSX.Element | string)[][] = [
     [
@@ -52,9 +54,7 @@ const Home: NextPage = () => {
           {/* left section */}
           <div className='grid bg-gray-200 bg-repeat place-content-center h-1/2 lg:h-full bg-circuit-board'>
             <div>
-              <h1 className='text-3xl sm:text-4xl lg:text-5xl tracking-[0.16em] font-bold'>
-                Falk Marinov
-              </h1>
+              <Title>Falk Marinov</Title>
               <TypeAnimation repeat={Infinity} sequence={sequence} />
             </div>
           </div>
