@@ -1,20 +1,20 @@
 import { render, screen } from '@testing-library/react';
-import { CharacterContainer } from './CharacterContainer';
+import { Character } from './Character';
 
-describe('<CharacterContainer />', () => {
+describe('<Character />', () => {
   it('should render', () => {
-    render(<CharacterContainer>I</CharacterContainer>);
+    render(<Character>I</Character>);
   });
 
   describe('prop: isHovered', () => {
     it('should be bg-gray-300', () => {
-      render(<CharacterContainer isHovered>I</CharacterContainer>);
+      render(<Character isHovered>I</Character>);
       expect(screen.getByText('I')).toHaveClass('bg-gray-300');
       expect(screen.getByText('I')).not.toHaveClass('bg-gray-200');
     });
 
     it('otherwise be bg-gray-200', () => {
-      render(<CharacterContainer>I</CharacterContainer>);
+      render(<Character>I</Character>);
       expect(screen.getByText('I')).toHaveClass('bg-gray-200');
       expect(screen.getByText('I')).not.toHaveClass('bg-gray-300');
     });
