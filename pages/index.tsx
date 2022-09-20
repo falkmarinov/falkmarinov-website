@@ -1,4 +1,4 @@
-import type { NextPage } from 'next';
+import { NextPage } from 'next';
 import Head from 'next/head';
 
 import { FaLinkedinIn } from 'react-icons/fa';
@@ -7,24 +7,25 @@ import { BsFillPersonFill } from 'react-icons/bs';
 import { TypeAnimation } from 'react-type-animation';
 
 import Title from '../components/Title';
+import LinkList from '../components/LinkList';
 
 const Home: NextPage = () => {
-  const links: (JSX.Element | string)[][] = [
-    [
-      <GrMail key={'mail-icon'} />,
-      'mail@falkmarinov.de',
-      'mailto:mail@falkmarinov.de',
-    ],
-    [
-      <FaLinkedinIn key={'linkedin-icon'} />,
-      '/falkmarinov',
-      'https://www.linkedin.com/in/falkmarinov',
-    ],
-    [
-      <BsFillPersonFill key={'person-icon'} />,
-      'personal resume (german)',
-      '/documents/personal-resume-german.pdf',
-    ],
+  const links = [
+    {
+      icon: <GrMail key={'0-mail-icon'} />,
+      label: 'mail@falkmarinov.de',
+      url: 'mailto:mail@falkmarinov.de',
+    },
+    {
+      icon: <FaLinkedinIn key={'1-linkedin-icon'} />,
+      label: '/falkmarinov',
+      url: 'https://www.linkedin.com/in/falkmarinov',
+    },
+    {
+      icon: <BsFillPersonFill key={'2-person-icon'} />,
+      label: 'personal resume (german)',
+      url: '/documents/personal-resume-german.pdf',
+    },
   ];
 
   const sequence = [
@@ -60,24 +61,7 @@ const Home: NextPage = () => {
           </div>
           {/* right section */}
           <div className='grid place-content-center h-1/2 lg:h-full bg-gray-50 '>
-            <div className='flex flex-col gap-5'>
-              {links.map(([icon, text, url]) => {
-                return (
-                  <a
-                    key={text as string}
-                    className='flex items-center gap-5 group'
-                    href={url as string}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  >
-                    <div className='grid w-12 h-12 transition duration-300 bg-gray-200 rounded-full place-content-center lg:text-lg group-hover:bg-gray-300'>
-                      {icon}
-                    </div>
-                    <span className='group-hover:underline'>{text}</span>
-                  </a>
-                );
-              })}
-            </div>
+            <LinkList linkItems={links} />
           </div>
         </div>
       </main>
