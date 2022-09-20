@@ -1,7 +1,7 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
 
-import { FaLinkedinIn } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { GrMail } from 'react-icons/gr';
 import { BsFillPersonFill } from 'react-icons/bs';
 import { TypeAnimation } from 'react-type-animation';
@@ -12,19 +12,24 @@ import LinkList from '../components/LinkList';
 const Home: NextPage = () => {
   const links = [
     {
-      icon: <GrMail key={'0-mail-icon'} />,
+      icon: <BsFillPersonFill key={'0-person-icon'} />,
+      label: 'personal resume (german)',
+      url: '/documents/personal-resume-german.pdf',
+    },
+    {
+      icon: <GrMail key={'1-mail-icon'} />,
       label: 'mail@falkmarinov.de',
       url: 'mailto:mail@falkmarinov.de',
     },
     {
-      icon: <FaLinkedinIn key={'1-linkedin-icon'} />,
+      icon: <FaLinkedinIn key={'2-linkedin-icon'} />,
       label: '/falkmarinov',
       url: 'https://www.linkedin.com/in/falkmarinov',
     },
     {
-      icon: <BsFillPersonFill key={'2-person-icon'} />,
-      label: 'personal resume (german)',
-      url: '/documents/personal-resume-german.pdf',
+      icon: <FaGithub key={'3-person-icon'} />,
+      label: '/falkmarinov',
+      url: 'https://github.com/falkmarinov',
     },
   ];
 
