@@ -13,17 +13,17 @@ export default {
       {
         icon: <AiOutlineUser />,
         label: 'Example 1',
-        url: new URL('https://example.com/'),
+        url: 'https://example.com/',
       },
       {
         icon: <AiOutlineUser />,
         label: 'Example 2',
-        url: new URL('https://example.com/'),
+        url: 'https://example.com/',
       },
       {
         icon: <AiOutlineUser />,
         label: 'Example 3',
-        url: new URL('https://example.com/'),
+        url: 'https://example.com/',
       },
     ],
   },

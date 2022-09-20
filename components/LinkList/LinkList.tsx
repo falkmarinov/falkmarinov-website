@@ -1,6 +1,5 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useState } from 'react';
 
-import { URL } from 'url';
 import cn from 'classnames';
 
 import Character from '../Character';
@@ -16,8 +15,9 @@ interface LinkListItemProps {
   label?: string;
   /**
    * URL of the link
+   * TODO: refactor to URL
    */
-  url: URL;
+  url: string;
 }
 
 /**
@@ -33,7 +33,7 @@ const LinkListItem = ({ icon, label, url }: LinkListItemProps) => {
     <a
       key={label as string}
       className='flex items-center gap-5 group'
-      href={url.href}
+      href={url}
       target='_blank'
       rel='noopener noreferrer'
       onMouseEnter={onMouseEnterEvent}
