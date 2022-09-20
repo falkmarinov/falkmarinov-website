@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { useState } from 'react';
 
 import cn from 'classnames';
 
@@ -52,24 +52,19 @@ interface LinkListProps {
   linkItems: LinkListItemProps[];
 }
 
-// TODO: use next/link instead of dom anchor
 export const LinkList = ({ linkItems }: LinkListProps) => {
-  const LinkListContext = createContext(linkItems);
-
   return (
-    <LinkListContext.Provider value={linkItems}>
-      <div className='flex flex-col gap-5'>
-        {linkItems.map(({ icon, label, url }, index) => {
-          return (
-            <LinkListItem
-              key={`${index}-${label}`}
-              icon={icon}
-              label={label}
-              url={url}
-            />
-          );
-        })}
-      </div>
-    </LinkListContext.Provider>
+    <div className='flex flex-col gap-5'>
+      {linkItems.map(({ icon, label, url }, index) => {
+        return (
+          <LinkListItem
+            key={`${index}-${label}`}
+            icon={icon}
+            label={label}
+            url={url}
+          />
+        );
+      })}
+    </div>
   );
 };
