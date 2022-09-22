@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import cn from 'classnames';
 
 import Character from '../Character';
+import useHover from 'react-use-hover';
 
 interface LinkListItemProps {
   /**
@@ -24,34 +25,32 @@ interface LinkListItemProps {
  * Renders a row for LinkList
  */
 const LinkListItem = ({ icon, label, url }: LinkListItemProps) => {
-  const [isHovered, setIsHovered] = useState(false);
-
-  const onMouseEnterEvent = () => setIsHovered(true);
-  const onMouseLeaveEvent = () => setIsHovered(false);
+  const [isHovering, hoverProps] = useHover();
 
   return (
     <a
-      key={label as string}
+      {...hoverProps}
       className='flex items-center gap-5 group'
       href={url}
       target='_blank'
       rel='noopener noreferrer'
-      onMouseEnter={onMouseEnterEvent}
-      onMouseLeave={onMouseLeaveEvent}
     >
-      <Character isHovered={isHovered}>{icon}</Character>
-      <span className={cn(isHovered && 'underline')}>{label}</span>
+      <Character isHovered={isHovering}>{icon}</Character>
+      <span className={cn(isHovering && 'underline')}>{label}</span>
     </a>
   );
 };
 
 interface LinkListProps {
   /**
-   *
+   * List of links and their icons and labels
    */
   linkItems: LinkListItemProps[];
 }
 
+/**
+ * Render a list of links with their icons and labels
+ */
 export const LinkList = ({ linkItems }: LinkListProps) => {
   return (
     <div className='flex flex-col gap-5'>
