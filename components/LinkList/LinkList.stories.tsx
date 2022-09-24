@@ -8,25 +8,6 @@ import { LinkList } from './LinkList';
 export default {
   title: 'Component/LinkList',
   component: LinkList,
-  args: {
-    linkItems: [
-      {
-        icon: <AiOutlineUser />,
-        label: 'Example 1',
-        url: 'https://example.com/',
-      },
-      {
-        icon: <AiOutlineUser />,
-        label: 'Example 2',
-        url: 'https://example.com/',
-      },
-      {
-        icon: <AiOutlineUser />,
-        label: 'Example 3',
-        url: 'https://example.com/',
-      },
-    ],
-  },
 } as ComponentMeta<typeof LinkList>;
 
 const Template: ComponentStory<typeof LinkList> = (args) => (
@@ -34,4 +15,52 @@ const Template: ComponentStory<typeof LinkList> = (args) => (
 );
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+  linkItems: [
+    {
+      url: 'https://example.com/',
+    },
+    {
+      url: 'https://example.com/',
+    },
+    {
+      url: 'https://example.com/',
+    },
+  ],
+};
+
+export const WithLabel = Template.bind({});
+WithLabel.args = {
+  linkItems: [
+    {
+      url: 'https://example.com/',
+      label: 'Example 1',
+    },
+    {
+      url: 'https://example.com/',
+      label: 'Example 2',
+    },
+    {
+      url: 'https://example.com/',
+      label: 'Example 3',
+    },
+  ],
+};
+
+export const WithIcon = Template.bind({});
+WithIcon.args = {
+  linkItems: [
+    {
+      url: 'https://example.com/',
+      icon: <AiOutlineUser />,
+    },
+    {
+      url: 'https://example.com/',
+      icon: <AiOutlineUser />,
+    },
+    {
+      url: 'https://example.com/',
+      icon: <AiOutlineUser />,
+    },
+  ],
+};
