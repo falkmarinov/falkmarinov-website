@@ -4,6 +4,7 @@ import cn from 'classnames';
 
 import Character from '../Character';
 import useHover from 'react-use-hover';
+import { AiOutlineLink } from 'react-icons/ai';
 
 interface LinkListItemProps {
   /**
@@ -16,7 +17,6 @@ interface LinkListItemProps {
   label?: string;
   /**
    * URL of the link
-   * TODO: refactor to URL
    */
   url: string;
 }
@@ -24,7 +24,11 @@ interface LinkListItemProps {
 /**
  * Renders a row for LinkList
  */
-const LinkListItem = ({ icon, label, url }: LinkListItemProps) => {
+const LinkListItem = ({
+  icon = <AiOutlineLink />,
+  url,
+  label = url,
+}: LinkListItemProps) => {
   const [isHovering, hoverProps] = useHover();
 
   return (
