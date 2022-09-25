@@ -6,11 +6,11 @@ WORKDIR /app
 
 # Install dependencies
 COPY package.json package-lock.json* ./
+
 RUN \
-  if [ -f package-lock.json ]; then npm install; \
+  if [ -f package-lock.json ]; then npm install --force; \
   else echo "Lockfile not found." && exit 1; \
   fi
-
 
 # Rebuild the source code only when needed
 FROM node:16-alpine AS builder
