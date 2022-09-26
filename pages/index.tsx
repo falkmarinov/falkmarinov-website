@@ -56,7 +56,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className='h-screen font-mono selection:bg-gray-300 sm:text-xl lg:text-2xl'>
-        <div className='h-full divide-x-2 divide-black lg:columns-2 lg:gap-0'>
+        <div className='h-full divide-y-2 divide-black lg:divide-y-0 lg:divide-x-2 lg:columns-2 lg:gap-0'>
           {/* left section */}
           <div className='grid bg-gray-200 bg-repeat place-content-center h-1/2 lg:h-full bg-circuit-board'>
             <div>
