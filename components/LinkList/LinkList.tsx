@@ -1,11 +1,11 @@
 import React from 'react';
 
 import cn from 'classnames';
+import useHover from 'react-use-hover';
+import { AiOutlineLink } from 'react-icons/ai';
 
 import Character from '../Character';
 import Stack from '../Stack';
-import useHover from 'react-use-hover';
-import { AiOutlineLink } from 'react-icons/ai';
 
 interface LinkListItemProps {
   /**
