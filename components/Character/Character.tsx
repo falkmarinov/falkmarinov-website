@@ -2,8 +2,6 @@ import React from 'react';
 
 import cn from 'classnames';
 
-import Stack from '../Stack';
-
 interface CharacterProps {
   /**
    * Character which should be rendered
@@ -20,15 +18,9 @@ interface CharacterProps {
  */
 export const Character = ({ children, isHovered = false }: CharacterProps) => {
   const classNames = cn(
-    'w-12 h-12 transition duration-300 rounded-full border-2 border-black lg:text-lg',
+    'flex justify-center items-center w-12 h-12 transition duration-300 rounded-full border-2 border-black lg:text-lg',
     { 'bg-gray-200': !isHovered, 'bg-gray-300': isHovered }
   );
 
-  return (
-    <div className={classNames}>
-      <Stack justify='center' align='center'>
-        {children}
-      </Stack>
-    </div>
-  );
+  return <div className={classNames}>{children}</div>;
 };
