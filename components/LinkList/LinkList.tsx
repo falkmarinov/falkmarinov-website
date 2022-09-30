@@ -32,16 +32,18 @@ const LinkListItem = ({
   const [isHovering, hoverProps] = useHover();
 
   return (
-    <a
-      {...hoverProps}
-      className='flex items-center gap-5'
-      href={url}
-      target='_blank'
-      rel='noopener noreferrer'
-    >
-      <Character isHovered={isHovering}>{icon}</Character>
-      <span className={cn(isHovering && 'underline')}>{label}</span>
-    </a>
+    <li>
+      <a
+        {...hoverProps}
+        className='flex items-center gap-5'
+        href={url}
+        target='_blank'
+        rel='noopener noreferrer'
+      >
+        <Character isHovered={isHovering}>{icon}</Character>
+        <span className={cn(isHovering && 'underline')}>{label}</span>
+      </a>
+    </li>
   );
 };
 
@@ -57,7 +59,7 @@ interface LinkListProps {
  */
 export const LinkList = ({ linkItems }: LinkListProps) => {
   return (
-    <div className='flex flex-col gap-5'>
+    <ol className='flex flex-col gap-5'>
       {linkItems.map(({ icon, label, url }, index) => {
         return (
           <LinkListItem
@@ -68,6 +70,6 @@ export const LinkList = ({ linkItems }: LinkListProps) => {
           />
         );
       })}
-    </div>
+    </ol>
   );
 };
