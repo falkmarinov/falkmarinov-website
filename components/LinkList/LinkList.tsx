@@ -41,7 +41,15 @@ const LinkListItem = ({
         rel='noopener noreferrer'
       >
         <Character isHovered={isHovering}>{icon}</Character>
-        <span className={cn(isHovering && 'underline')}>{label}</span>
+        <div className='relative'>
+          <span>{label}</span>
+          <span
+            className={cn(
+              'absolute left-0 transition-all bg-black h-[2px] bottom-1',
+              isHovering ? 'w-full' : 'w-0'
+            )}
+          ></span>
+        </div>
       </a>
     </li>
   );
