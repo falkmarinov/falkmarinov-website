@@ -48,7 +48,7 @@ const LinkListItem = ({
               'absolute left-0 transition-all bg-black h-[2px] bottom-1',
               isHovering ? 'w-full' : 'w-0'
             )}
-          ></span>
+          />
         </div>
       </a>
     </li>
