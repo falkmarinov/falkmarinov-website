@@ -2,4 +2,4 @@
 
 Inspired by a business card.
 
-![website](./docs/assets/website.png)
+[<img src="./docs/assets/website.png">](https://falkmarinov.de)
