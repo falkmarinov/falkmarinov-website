@@ -1,5 +1,6 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { GrMail } from 'react-icons/gr';
@@ -10,11 +11,16 @@ import Title from '../components/Title';
 import LinkList from '../components/LinkList';
 
 const Home: NextPage = () => {
+  const { locale } = useRouter();
+
   const links = [
     {
       icon: <BsFillPersonFill key={'0-person-icon'} />,
-      label: 'personal resume (german)',
-      url: '/documents/personal-resume-german.pdf',
+      label: 'personal resume',
+      url:
+        locale === 'de'
+          ? '/documents/personal-resume-german.pdf'
+          : '/documents/personal-resume-english.pdf',
     },
     {
       icon: <GrMail key={'1-mail-icon'} />,
