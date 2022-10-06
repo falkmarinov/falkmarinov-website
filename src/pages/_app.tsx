@@ -1,9 +1,14 @@
+import type { AppProps } from 'next/app';
+import { NextIntlProvider } from 'next-intl';
+
 import '../styles/tailwind.css';
 
-import type { AppProps } from 'next/app';
-
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return (
+    <NextIntlProvider messages={pageProps.messages}>
+      <Component {...pageProps} />;
+    </NextIntlProvider>
+  );
 }
 
 export default MyApp;

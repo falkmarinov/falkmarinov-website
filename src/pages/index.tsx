@@ -1,6 +1,7 @@
-import { NextPage } from 'next';
+import { NextPage, GetStaticPropsContext } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import { useTranslations } from 'next-intl';
 
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { GrMail } from 'react-icons/gr';
@@ -12,11 +13,12 @@ import LinkList from '../components/LinkList';
 
 const Home: NextPage = () => {
   const { locale } = useRouter();
+  const t = useTranslations('Index');
 
   const links = [
     {
       icon: <BsFillPersonFill key={'0-person-icon'} />,
-      label: 'personal resume',
+      label: t('personal-resume'),
       url:
         locale === 'de'
           ? '/documents/personal-resume-german.pdf'
@@ -79,5 +81,13 @@ const Home: NextPage = () => {
     </>
   );
 };
+
+export async function getStaticProps({ locale }: GetStaticPropsContext) {
+  return {
+    props: {
+      messages: (await import(`../messages/${locale}.json`)).default,
+    },
+  };
+}
 
 export default Home;
