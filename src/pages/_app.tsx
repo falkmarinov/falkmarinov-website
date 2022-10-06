@@ -6,7 +6,7 @@ import '../styles/tailwind.css';
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <NextIntlProvider messages={pageProps.messages}>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </NextIntlProvider>
   );
 }
