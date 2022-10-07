@@ -12,7 +12,7 @@ import Title from '../components/Title';
 import LinkList from '../components/LinkList';
 
 const Home: NextPage = () => {
-  const { locale } = useRouter();
+  const router = useRouter();
   const t = useTranslations('Index');
 
   const links = [
@@ -20,7 +20,7 @@ const Home: NextPage = () => {
       icon: <BsFillPersonFill key={'0-person-icon'} />,
       label: t('personal-resume'),
       url:
-        locale === 'de'
+        router.locale === 'de'
           ? '/documents/personal-resume-german.pdf'
           : '/documents/personal-resume-english.pdf',
     },
@@ -63,7 +63,7 @@ const Home: NextPage = () => {
         <meta name='description' content='Personal website of Falk Marinov' />
       </Head>
 
-      <main className='h-screen font-mono selection:bg-gray-300 sm:text-xl lg:text-2xl'>
+      <main className='relative h-screen font-mono selection:bg-gray-300 sm:text-xl lg:text-2xl'>
         <div className='h-full divide-y-2 divide-black lg:divide-y-0 lg:divide-x-2 lg:columns-2 lg:gap-0'>
           {/* left section */}
           <div className='grid bg-gray-200 bg-repeat place-content-center h-1/2 lg:h-full bg-circuit-board'>
@@ -77,6 +77,15 @@ const Home: NextPage = () => {
             <LinkList linkItems={links} />
           </div>
         </div>
+
+        <select
+          defaultValue={router.locale}
+          onChange={(e) => router.push('', '', { locale: e.target.value })}
+          className='absolute bg-transparent font-bold lg:font-normal top-[3vh] right-[3vw]'
+        >
+          <option value='en'>EN</option>
+          <option value='de'>DE</option>
+        </select>
       </main>
     </>
   );
