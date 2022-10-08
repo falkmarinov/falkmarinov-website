@@ -83,7 +83,7 @@ const Home: NextPage = () => {
           onChange={(e) => router.push('', '', { locale: e.target.value })}
           className='absolute bg-transparent font-bold lg:font-normal top-[3vh] right-[3vw]'
         >
-          {router.locales?.map((locale, index) => {
+          {router.locales?.sort().map((locale, index) => {
             return (
               <option value={locale} key={`${locale}-${index}`}>
                 {locale.toUpperCase()}
