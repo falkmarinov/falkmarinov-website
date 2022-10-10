@@ -1,22 +1,28 @@
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
+
+import { AiFillApi } from 'react-icons/ai';
+
 import { Character } from './Character';
 
 describe('<Character />', () => {
-  it('should render', () => {
-    render(<Character>I</Character>);
+  describe.each([
+    ['string', 'I'],
+    ['number', 1],
+    ['icon', <AiFillApi key='AiFillApi' />],
+  ])('should render different character types', (type, value) => {
+    it(`${type}`, () => {
+      const { container } = render(<Character>{value}</Character>);
+      expect(container).toMatchSnapshot();
+    });
   });
 
-  describe('prop: isHovered', () => {
-    it('should be black', () => {
-      render(<Character isHovered>I</Character>);
-      expect(screen.getByText('I')).toHaveClass('bg-black', 'text-white');
-      expect(screen.getByText('I')).not.toHaveClass('bg-gray-200');
-    });
-
-    it('otherwise be bg-gray-200', () => {
-      render(<Character>I</Character>);
-      expect(screen.getByText('I')).toHaveClass('bg-gray-200');
-      expect(screen.getByText('I')).not.toHaveClass('bg-gray-300');
+  describe.each([
+    ['should be black and white', true],
+    ['should be gray and black bordered', false],
+  ])('prop: isHovered', (message, value) => {
+    it(`${value} => ${message}`, () => {
+      const { container } = render(<Character isHovered={value}>I</Character>);
+      expect(container).toMatchSnapshot();
     });
   });
 });
