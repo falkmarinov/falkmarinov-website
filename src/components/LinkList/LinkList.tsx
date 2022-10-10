@@ -59,7 +59,7 @@ interface LinkListProps {
   /**
    * List of links and their icons and labels
    */
-  linkItems: LinkListItemProps[];
+  linkItems: [LinkListItemProps, ...LinkListItemProps[]];
 }
 
 /**
