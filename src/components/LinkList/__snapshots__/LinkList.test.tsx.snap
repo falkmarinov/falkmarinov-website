@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LinkList /> should render different amounts of items One item 1`] = `
+<div>
+  <ol
+    class="flex flex-col gap-5"
+  >
+    <li>
+      <a
+        class="flex items-center gap-5"
+        href="https://www.example.com/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <div
+          class="flex justify-center items-center w-12 h-12 rounded-full border-2 border-black lg:text-lg transition duration-300 bg-gray-200"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 448 512"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M436 160c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-20V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h320c26.5 0 48-21.5 48-48v-48h20c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-20v-64h20c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-20v-64h20zm-228-32c35.3 0 64 28.7 64 64s-28.7 64-64 64-64-28.7-64-64 28.7-64 64-64zm112 236.8c0 10.6-10 19.2-22.4 19.2H118.4C106 384 96 375.4 96 364.8v-19.2c0-31.8 30.1-57.6 67.2-57.6h5c12.3 5.1 25.7 8 39.8 8s27.6-2.9 39.8-8h5c37.1 0 67.2 25.8 67.2 57.6v19.2z"
+            />
+          </svg>
+        </div>
+        <div
+          class="relative"
+        >
+          <span>
+            Example
+          </span>
+          <span
+            class="absolute left-0 transition-all bg-black h-[2px] bottom-1 w-0"
+          />
+        </div>
+      </a>
+    </li>
+  </ol>
+</div>
+`;
+
+exports[`<LinkList /> should render different amounts of items Two items 1`] = `
+<div>
+  <ol
+    class="flex flex-col gap-5"
+  >
+    <li>
+      <a
+        class="flex items-center gap-5"
+        href="https://www.example.com/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <div
+          class="flex justify-center items-center w-12 h-12 rounded-full border-2 border-black lg:text-lg transition duration-300 bg-gray-200"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 448 512"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M436 160c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-20V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h320c26.5 0 48-21.5 48-48v-48h20c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-20v-64h20c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-20v-64h20zm-228-32c35.3 0 64 28.7 64 64s-28.7 64-64 64-64-28.7-64-64 28.7-64 64-64zm112 236.8c0 10.6-10 19.2-22.4 19.2H118.4C106 384 96 375.4 96 364.8v-19.2c0-31.8 30.1-57.6 67.2-57.6h5c12.3 5.1 25.7 8 39.8 8s27.6-2.9 39.8-8h5c37.1 0 67.2 25.8 67.2 57.6v19.2z"
+            />
+          </svg>
+        </div>
+        <div
+          class="relative"
+        >
+          <span>
+            Example 1
+          </span>
+          <span
+            class="absolute left-0 transition-all bg-black h-[2px] bottom-1 w-0"
+          />
+        </div>
+      </a>
+    </li>
+    <li>
+      <a
+        class="flex items-center gap-5"
+        href="https://www.example.com/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <div
+          class="flex justify-center items-center w-12 h-12 rounded-full border-2 border-black lg:text-lg transition duration-300 bg-gray-200"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 448 512"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M436 160c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-20V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h320c26.5 0 48-21.5 48-48v-48h20c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-20v-64h20c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-20v-64h20zm-228-32c35.3 0 64 28.7 64 64s-28.7 64-64 64-64-28.7-64-64 28.7-64 64-64zm112 236.8c0 10.6-10 19.2-22.4 19.2H118.4C106 384 96 375.4 96 364.8v-19.2c0-31.8 30.1-57.6 67.2-57.6h5c12.3 5.1 25.7 8 39.8 8s27.6-2.9 39.8-8h5c37.1 0 67.2 25.8 67.2 57.6v19.2z"
+            />
+          </svg>
+        </div>
+        <div
+          class="relative"
+        >
+          <span>
+            Example 2
+          </span>
+          <span
+            class="absolute left-0 transition-all bg-black h-[2px] bottom-1 w-0"
+          />
+        </div>
+      </a>
+    </li>
+  </ol>
+</div>
+`;
