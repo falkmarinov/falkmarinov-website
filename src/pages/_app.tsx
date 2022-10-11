@@ -3,7 +3,11 @@ import { NextIntlProvider } from 'next-intl';
 
 import '../styles/tailwind.css';
 
-function MyApp({ Component, pageProps }: AppProps) {
+interface PageProps {
+  messages: any;
+}
+
+function MyApp({ Component, pageProps }: AppProps<PageProps>) {
   return (
     <NextIntlProvider messages={pageProps.messages}>
       <Component {...pageProps} />
