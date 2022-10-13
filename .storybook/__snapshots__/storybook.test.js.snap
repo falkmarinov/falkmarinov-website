@@ -54,11 +54,46 @@ exports[`Storyshots Component/Character Hovered 1`] = `
 </div>
 `;
 
-exports[`Storyshots Component/Character With Character 1`] = `
+exports[`Storyshots Component/Character With Icon 1`] = `
 <div
   className="flex justify-center items-center w-12 h-12 rounded-full border-2 border-black lg:text-lg transition duration-300 bg-gray-200"
 >
-  I
+  <svg
+    fill="currentColor"
+    height="1em"
+    stroke="currentColor"
+    strokeWidth="0"
+    style={
+      {
+        "color": undefined,
+      }
+    }
+    viewBox="0 0 16 16"
+    width="1em"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      clipRule="evenodd"
+      d="M4.111 2.18a7 7 0 1 1 7.778 11.64A7 7 0 0 1 4.11 2.18zm.556 10.809a6 6 0 1 0 6.666-9.978 6 6 0 0 0-6.666 9.978zM6.5 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm5 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM8 11a3 3 0 0 1-2.65-1.58l-.87.48a4 4 0 0 0 7.12-.16l-.9-.43A3 3 0 0 1 8 11z"
+      fillRule="evenodd"
+    />
+  </svg>
+</div>
+`;
+
+exports[`Storyshots Component/Character With Number 1`] = `
+<div
+  className="flex justify-center items-center w-12 h-12 rounded-full border-2 border-black lg:text-lg transition duration-300 bg-gray-200"
+>
+  10
+</div>
+`;
+
+exports[`Storyshots Component/Character With String 1`] = `
+<div
+  className="flex justify-center items-center w-12 h-12 rounded-full border-2 border-black lg:text-lg transition duration-300 bg-gray-200"
+>
+  S
 </div>
 `;
 
