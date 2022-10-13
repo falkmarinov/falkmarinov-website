@@ -8,7 +8,7 @@ import { Character } from './Character';
 export default {
   title: 'Component/Character',
   component: Character,
-  args: { children: <VscSmiley /> },
+  args: { children: <VscSmiley />, isHovered: false },
   argTypes: {
     children: { control: false },
   },
@@ -24,5 +24,11 @@ Default.args = {};
 export const Hovered = Template.bind({});
 Hovered.args = { isHovered: true };
 
-export const WithCharacter = Template.bind({});
-WithCharacter.args = { children: 'I' };
+export const WithString = Template.bind({});
+WithString.args = { children: 'S' };
+
+export const WithNumber = Template.bind({});
+WithNumber.args = { children: 10 };
+
+export const WithIcon = Template.bind({});
+WithIcon.args = {};
