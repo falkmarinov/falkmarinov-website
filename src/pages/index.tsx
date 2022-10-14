@@ -41,16 +41,18 @@ const Home: NextPage = () => {
     },
   ];
 
+  const sloganParts = t('slogan').split(' ');
+
   const sequence = [
     '',
     1000,
-    'focussed.',
+    sloganParts[0],
     1000,
-    'focussed. adaptable.',
+    `${sloganParts[0]} ${sloganParts[1]}`,
     1000,
-    'focussed. adaptable. logical.',
+    `${sloganParts[0]} ${sloganParts[1]} ${sloganParts[2]}`,
     1000,
-    'focussed. adaptable. logical. keen.',
+    `${sloganParts[0]} ${sloganParts[1]} ${sloganParts[2]} ${sloganParts[3]}`,
     2000,
   ];
 
