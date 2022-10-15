@@ -41,10 +41,10 @@ const Home: NextPage = () => {
     },
   ];
 
-  const getSlogan = (): string => {
+  const getSlogan = (delay: number = 1000): string => {
     const slogan = t('slogan');
     const sloganParts = slogan.split(' ');
-    const delayedSlogan = sloganParts.join('^1000 ');
+    const delayedSlogan = `^${delay} ${sloganParts.join(`^${delay} `)}`;
 
     return delayedSlogan;
   };
