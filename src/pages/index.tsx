@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { GrMail } from 'react-icons/gr';
 import { BsFillPersonFill } from 'react-icons/bs';
-import { TypeAnimation } from 'react-type-animation';
+import Typed from 'react-typed';
 
 import Title from '../components/Title';
 import LinkList from '../components/LinkList';
@@ -41,20 +41,13 @@ const Home: NextPage = () => {
     },
   ];
 
-  const sloganParts = t('slogan').split(' ');
+  const getSlogan = (): string => {
+    const slogan = t('slogan');
+    const sloganParts = slogan.split(' ');
+    const delayedSlogan = sloganParts.join('^1000 ');
 
-  const sequence = [
-    '',
-    1000,
-    sloganParts[0],
-    1000,
-    `${sloganParts[0]} ${sloganParts[1]}`,
-    1000,
-    `${sloganParts[0]} ${sloganParts[1]} ${sloganParts[2]}`,
-    1000,
-    `${sloganParts[0]} ${sloganParts[1]} ${sloganParts[2]} ${sloganParts[3]}`,
-    2000,
-  ];
+    return delayedSlogan;
+  };
 
   return (
     <>
@@ -71,7 +64,14 @@ const Home: NextPage = () => {
           <div className='grid bg-gray-200 bg-repeat place-content-center h-1/2 lg:h-full bg-circuit-board'>
             <div>
               <Title>Falk Marinov</Title>
-              <TypeAnimation repeat={Infinity} sequence={sequence} />
+              <Typed
+                strings={[getSlogan()]}
+                showCursor
+                typeSpeed={50}
+                backSpeed={50}
+                cursorChar='|'
+                loop
+              />
             </div>
           </div>
           {/* right section */}
