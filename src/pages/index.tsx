@@ -42,11 +42,12 @@ const Home: NextPage = () => {
   ];
 
   const getSlogan = (delay: number = 1000): string => {
-    const slogan = t('slogan');
-    const sloganParts = slogan.split(' ');
-    const delayedSlogan = `^${delay} ${sloganParts.join(`^${delay} `)}`;
+    let slogan = t('slogan');
+    let sloganParts = slogan.split(' ');
 
-    return delayedSlogan;
+    slogan = `^${delay} ${sloganParts.join(`^${delay} `)}`;
+
+    return slogan;
   };
 
   return (
