@@ -2,6 +2,7 @@ import { NextPage, GetStaticPropsContext } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useTranslations } from 'next-intl';
+import { useRef } from 'react';
 
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { GrMail } from 'react-icons/gr';
@@ -14,6 +15,7 @@ import LinkList from '../components/LinkList';
 const Home: NextPage = () => {
   const router = useRouter();
   const t = useTranslations('Index');
+  const typedRef = useRef<any>(null);
 
   const links = [
     {
@@ -66,6 +68,9 @@ const Home: NextPage = () => {
             <div className='max-w-[233.73px] sm:max-w-[280.48px] lg:max-w-[373.97px]'>
               <Title>Falk Marinov</Title>
               <Typed
+                typedRef={(ref: any) => {
+                  typedRef.current = ref;
+                }}
                 strings={[getSlogan()]}
                 showCursor
                 typeSpeed={50}
@@ -83,7 +88,10 @@ const Home: NextPage = () => {
 
         <select
           defaultValue={router.locale}
-          onChange={(e) => router.push('', '', { locale: e.target.value })}
+          onChange={async (e) => {
+            await router.push('', '', { locale: e.target.value });
+            typedRef.current.reset();
+          }}
           className='absolute bg-transparent font-bold lg:font-normal top-[3vh] right-[3vh]'
         >
           {router.locales?.sort().map((locale, index) => {
