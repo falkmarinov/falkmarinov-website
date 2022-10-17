@@ -65,7 +65,7 @@ const Home: NextPage = () => {
         <div className='h-full divide-y-2 divide-black lg:divide-y-0 lg:divide-x-2 lg:columns-2 lg:gap-0'>
           {/* left section */}
           <div className='grid bg-gray-200 bg-repeat place-content-center h-1/2 lg:h-full bg-circuit-board'>
-            <div className='max-w-[233.73px] sm:max-w-[280.48px] lg:max-w-[373.97px]'>
+            <div className='min-h-[84px] max-w-[233.73px] sm:min-h-[96px] sm:max-w-[280.48px] lg:min-h-[112px] lg:max-w-[373.97px]'>
               <Title>Falk Marinov</Title>
               <Typed
                 typedRef={(ref: any) => {
