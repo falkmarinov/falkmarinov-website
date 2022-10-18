@@ -2,7 +2,7 @@
 
 exports[`Storyshots Component/Character Default 1`] = `
 <div
-  className="flex justify-center items-center w-12 h-12 rounded-full border-2 border-black lg:text-lg transition duration-300 bg-gray-200"
+  className="flex justify-center items-center w-12 h-12 rounded-full border-2 border-black text-lg transition duration-300 bg-gray-200"
 >
   <svg
     fill="currentColor"
@@ -29,7 +29,7 @@ exports[`Storyshots Component/Character Default 1`] = `
 
 exports[`Storyshots Component/Character Hovered 1`] = `
 <div
-  className="flex justify-center items-center w-12 h-12 rounded-full border-2 border-black lg:text-lg transition duration-300 bg-black text-white"
+  className="flex justify-center items-center w-12 h-12 rounded-full border-2 border-black text-lg transition duration-300 bg-black text-white"
 >
   <svg
     fill="currentColor"
@@ -56,7 +56,7 @@ exports[`Storyshots Component/Character Hovered 1`] = `
 
 exports[`Storyshots Component/Character With Icon 1`] = `
 <div
-  className="flex justify-center items-center w-12 h-12 rounded-full border-2 border-black lg:text-lg transition duration-300 bg-gray-200"
+  className="flex justify-center items-center w-12 h-12 rounded-full border-2 border-black text-lg transition duration-300 bg-gray-200"
 >
   <svg
     fill="currentColor"
@@ -83,7 +83,7 @@ exports[`Storyshots Component/Character With Icon 1`] = `
 
 exports[`Storyshots Component/Character With Number 1`] = `
 <div
-  className="flex justify-center items-center w-12 h-12 rounded-full border-2 border-black lg:text-lg transition duration-300 bg-gray-200"
+  className="flex justify-center items-center w-12 h-12 rounded-full border-2 border-black text-lg transition duration-300 bg-gray-200"
 >
   10
 </div>
@@ -91,7 +91,7 @@ exports[`Storyshots Component/Character With Number 1`] = `
 
 exports[`Storyshots Component/Character With String 1`] = `
 <div
-  className="flex justify-center items-center w-12 h-12 rounded-full border-2 border-black lg:text-lg transition duration-300 bg-gray-200"
+  className="flex justify-center items-center w-12 h-12 rounded-full border-2 border-black text-lg transition duration-300 bg-gray-200"
 >
   S
 </div>
@@ -111,7 +111,7 @@ exports[`Storyshots Component/LinkList Default 1`] = `
       target="_blank"
     >
       <div
-        className="flex justify-center items-center w-12 h-12 rounded-full border-2 border-black lg:text-lg transition duration-300 bg-gray-200"
+        className="flex justify-center items-center w-12 h-12 rounded-full border-2 border-black text-lg transition duration-300 bg-gray-200"
       >
         <svg
           fill="currentColor"
@@ -154,7 +154,7 @@ exports[`Storyshots Component/LinkList Default 1`] = `
       target="_blank"
     >
       <div
-        className="flex justify-center items-center w-12 h-12 rounded-full border-2 border-black lg:text-lg transition duration-300 bg-gray-200"
+        className="flex justify-center items-center w-12 h-12 rounded-full border-2 border-black text-lg transition duration-300 bg-gray-200"
       >
         <svg
           fill="currentColor"
@@ -197,7 +197,7 @@ exports[`Storyshots Component/LinkList Default 1`] = `
       target="_blank"
     >
       <div
-        className="flex justify-center items-center w-12 h-12 rounded-full border-2 border-black lg:text-lg transition duration-300 bg-gray-200"
+        className="flex justify-center items-center w-12 h-12 rounded-full border-2 border-black text-lg transition duration-300 bg-gray-200"
       >
         <svg
           fill="currentColor"
@@ -247,7 +247,7 @@ exports[`Storyshots Component/LinkList With Icon 1`] = `
       target="_blank"
     >
       <div
-        className="flex justify-center items-center w-12 h-12 rounded-full border-2 border-black lg:text-lg transition duration-300 bg-gray-200"
+        className="flex justify-center items-center w-12 h-12 rounded-full border-2 border-black text-lg transition duration-300 bg-gray-200"
       >
         <svg
           fill="currentColor"
@@ -290,7 +290,7 @@ exports[`Storyshots Component/LinkList With Icon 1`] = `
       target="_blank"
     >
       <div
-        className="flex justify-center items-center w-12 h-12 rounded-full border-2 border-black lg:text-lg transition duration-300 bg-gray-200"
+        className="flex justify-center items-center w-12 h-12 rounded-full border-2 border-black text-lg transition duration-300 bg-gray-200"
       >
         <svg
           fill="currentColor"
@@ -333,7 +333,7 @@ exports[`Storyshots Component/LinkList With Icon 1`] = `
       target="_blank"
     >
       <div
-        className="flex justify-center items-center w-12 h-12 rounded-full border-2 border-black lg:text-lg transition duration-300 bg-gray-200"
+        className="flex justify-center items-center w-12 h-12 rounded-full border-2 border-black text-lg transition duration-300 bg-gray-200"
       >
         <svg
           fill="currentColor"
@@ -383,7 +383,7 @@ exports[`Storyshots Component/LinkList With Label 1`] = `
       target="_blank"
     >
       <div
-        className="flex justify-center items-center w-12 h-12 rounded-full border-2 border-black lg:text-lg transition duration-300 bg-gray-200"
+        className="flex justify-center items-center w-12 h-12 rounded-full border-2 border-black text-lg transition duration-300 bg-gray-200"
       >
         <svg
           fill="currentColor"
@@ -426,7 +426,7 @@ exports[`Storyshots Component/LinkList With Label 1`] = `
       target="_blank"
     >
       <div
-        className="flex justify-center items-center w-12 h-12 rounded-full border-2 border-black lg:text-lg transition duration-300 bg-gray-200"
+        className="flex justify-center items-center w-12 h-12 rounded-full border-2 border-black text-lg transition duration-300 bg-gray-200"
       >
         <svg
           fill="currentColor"
@@ -469,7 +469,7 @@ exports[`Storyshots Component/LinkList With Label 1`] = `
       target="_blank"
     >
       <div
-        className="flex justify-center items-center w-12 h-12 rounded-full border-2 border-black lg:text-lg transition duration-300 bg-gray-200"
+        className="flex justify-center items-center w-12 h-12 rounded-full border-2 border-black text-lg transition duration-300 bg-gray-200"
       >
         <svg
           fill="currentColor"
