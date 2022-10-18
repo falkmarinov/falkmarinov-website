@@ -18,7 +18,7 @@ interface CharacterProps {
  */
 export const Character = ({ children, isHovered = false }: CharacterProps) => {
   const classNames = cn(
-    'flex justify-center items-center w-12 h-12 rounded-full border-2 border-black lg:text-lg',
+    'flex justify-center items-center w-12 h-12 rounded-full border-2 border-black text-lg',
     'transition duration-300',
     isHovered ? 'bg-black text-white' : 'bg-gray-200'
   );
