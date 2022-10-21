@@ -43,13 +43,11 @@ const Home: NextPage = () => {
     },
   ];
 
-  const getSlogan = (delay: number = 1000): string => {
-    let slogan = t('slogan');
+  const formatSlogan = (slogan: string, delay: number = 1000): string => {
     let sloganParts = slogan.split(' ');
+    let formattedSlogan = `^${delay} ${sloganParts.join(`^${delay} `)}`;
 
-    slogan = `^${delay} ${sloganParts.join(`^${delay} `)}`;
-
-    return slogan;
+    return formattedSlogan;
   };
 
   const localeSelectChangeHandler: ChangeEventHandler<HTMLSelectElement> =
@@ -77,7 +75,7 @@ const Home: NextPage = () => {
                 typedRef={(ref: any) => {
                   typedRef.current = ref;
                 }}
-                strings={[getSlogan()]}
+                strings={[formatSlogan(t('slogan'))]}
                 showCursor
                 typeSpeed={50}
                 backSpeed={50}
