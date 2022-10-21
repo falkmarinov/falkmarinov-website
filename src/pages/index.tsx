@@ -65,10 +65,25 @@ const Home: NextPage = () => {
         <meta name='description' content='Personal website of Falk Marinov' />
       </Head>
 
-      <main className='relative h-screen font-mono selection:bg-gray-300 sm:text-xl lg:text-2xl'>
-        <div className='h-full divide-y-2 divide-black lg:divide-y-0 lg:divide-x-2 lg:columns-2 lg:gap-0'>
+      <main className='font-mono selection:bg-gray-300 sm:text-xl lg:text-2xl'>
+        <section className='relative h-screen lg:columns-2 lg:gap-0'>
+          <div className='absolute top-[3vh] right-[3vh] font-bold lg:font-normal'>
+            <select
+              defaultValue={router.locale}
+              onChange={localeSelectChangeHandler}
+              className='bg-transparent'
+            >
+              {router.locales?.sort().map((locale, index) => {
+                return (
+                  <option value={locale} key={`${locale}-${index}`}>
+                    {locale.toUpperCase()}
+                  </option>
+                );
+              })}
+            </select>
+          </div>
           {/* left section */}
-          <div className='flex items-center justify-center bg-gray-200 bg-repeat h-1/2 lg:h-full bg-circuit-board'>
+          <div className='flex items-center justify-center bg-gray-200 bg-repeat border-b-[1px] border-black lg:border-b-0 lg:border-r-[1px] h-1/2 lg:h-full bg-circuit-board'>
             <div className='min-h-[84px] max-w-[233.73px] sm:min-h-[96px] sm:max-w-[280.48px] lg:min-h-[112px] lg:max-w-[373.97px]'>
               <Title>Falk Marinov</Title>
               <Typed
@@ -85,26 +100,10 @@ const Home: NextPage = () => {
             </div>
           </div>
           {/* right section */}
-          <div className='flex items-center justify-center h-1/2 lg:h-full bg-gray-50 '>
+          <div className='flex items-center justify-center border-t-[1px] border-black lg:border-t-0 lg:border-l-[1px] h-1/2 lg:h-full bg-gray-50'>
             <LinkList linkItems={links} />
           </div>
-        </div>
-
-        <div className='absolute top-[3vh] right-[3vh] font-bold lg:font-normal'>
-          <select
-            defaultValue={router.locale}
-            onChange={localeSelectChangeHandler}
-            className='bg-transparent'
-          >
-            {router.locales?.sort().map((locale, index) => {
-              return (
-                <option value={locale} key={`${locale}-${index}`}>
-                  {locale.toUpperCase()}
-                </option>
-              );
-            })}
-          </select>
-        </div>
+        </section>
       </main>
     </>
   );
