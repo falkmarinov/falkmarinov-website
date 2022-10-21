@@ -84,19 +84,23 @@ const Home: NextPage = () => {
           </div>
           {/* left section */}
           <div className='flex items-center justify-center bg-gray-200 bg-repeat border-b-[1px] border-black lg:border-b-0 lg:border-r-[1px] h-1/2 lg:h-full bg-circuit-board'>
-            <div className='min-h-[84px] max-w-[233.73px] sm:min-h-[96px] sm:max-w-[280.48px] lg:min-h-[112px] lg:max-w-[373.97px]'>
+            <div>
               <Title>Falk Marinov</Title>
-              <Typed
-                typedRef={(ref: any) => {
-                  typedRef.current = ref;
-                }}
-                strings={[formatSlogan(t('slogan'))]}
-                showCursor
-                typeSpeed={50}
-                backSpeed={50}
-                cursorChar='|'
-                loop
-              />
+              <div className='flex'>
+                <div className='w-0 h-8 grow'>
+                  <Typed
+                    typedRef={(ref: any) => {
+                      typedRef.current = ref;
+                    }}
+                    strings={[formatSlogan(t('slogan'))]}
+                    showCursor
+                    typeSpeed={50}
+                    backSpeed={50}
+                    cursorChar='|'
+                    loop
+                  />
+                </div>
+              </div>
             </div>
           </div>
           {/* right section */}
