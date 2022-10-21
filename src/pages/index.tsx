@@ -68,7 +68,7 @@ const Home: NextPage = () => {
       <main className='relative h-screen font-mono selection:bg-gray-300 sm:text-xl lg:text-2xl'>
         <div className='h-full divide-y-2 divide-black lg:divide-y-0 lg:divide-x-2 lg:columns-2 lg:gap-0'>
           {/* left section */}
-          <div className='grid bg-gray-200 bg-repeat place-content-center h-1/2 lg:h-full bg-circuit-board'>
+          <div className='flex items-center justify-center bg-gray-200 bg-repeat h-1/2 lg:h-full bg-circuit-board'>
             <div className='min-h-[84px] max-w-[233.73px] sm:min-h-[96px] sm:max-w-[280.48px] lg:min-h-[112px] lg:max-w-[373.97px]'>
               <Title>Falk Marinov</Title>
               <Typed
@@ -85,7 +85,7 @@ const Home: NextPage = () => {
             </div>
           </div>
           {/* right section */}
-          <div className='grid place-content-center h-1/2 lg:h-full bg-gray-50 '>
+          <div className='flex items-center justify-center h-1/2 lg:h-full bg-gray-50 '>
             <LinkList linkItems={links} />
           </div>
         </div>
