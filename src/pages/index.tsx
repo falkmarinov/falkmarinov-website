@@ -2,7 +2,7 @@ import { NextPage, GetStaticPropsContext } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useTranslations } from 'next-intl';
-import { useRef } from 'react';
+import { useRef, ChangeEventHandler } from 'react';
 
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { GrMail } from 'react-icons/gr';
@@ -52,6 +52,12 @@ const Home: NextPage = () => {
     return slogan;
   };
 
+  const localeSelectChangeHandler: ChangeEventHandler<HTMLSelectElement> =
+    async (e) => {
+      await router.push('', '', { locale: e.target.value });
+      typedRef.current.reset();
+    };
+
   return (
     <>
       <Head>
@@ -86,22 +92,21 @@ const Home: NextPage = () => {
           </div>
         </div>
 
-        <select
-          defaultValue={router.locale}
-          onChange={async (e) => {
-            await router.push('', '', { locale: e.target.value });
-            typedRef.current.reset();
-          }}
-          className='absolute bg-transparent font-bold lg:font-normal top-[3vh] right-[3vh]'
-        >
-          {router.locales?.sort().map((locale, index) => {
-            return (
-              <option value={locale} key={`${locale}-${index}`}>
-                {locale.toUpperCase()}
-              </option>
-            );
-          })}
-        </select>
+        <div className='absolute top-[3vh] right-[3vh] font-bold lg:font-normal'>
+          <select
+            defaultValue={router.locale}
+            onChange={localeSelectChangeHandler}
+            className='bg-transparent'
+          >
+            {router.locales?.sort().map((locale, index) => {
+              return (
+                <option value={locale} key={`${locale}-${index}`}>
+                  {locale.toUpperCase()}
+                </option>
+              );
+            })}
+          </select>
+        </div>
       </main>
     </>
   );
