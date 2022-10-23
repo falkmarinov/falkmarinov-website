@@ -71,7 +71,7 @@ const Home: NextPage = () => {
             <select
               defaultValue={router.locale}
               onChange={localeSelectChangeHandler}
-              className='bg-transparent'
+              className='bg-transparent cursor-pointer'
             >
               {router.locales?.sort().map((locale, index) => {
                 return (
