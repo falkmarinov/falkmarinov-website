@@ -2,9 +2,15 @@ import { ChangeEvent, ChangeEventHandler, HTMLAttributes } from 'react';
 import { useRouter } from 'next/router';
 
 interface LocaleSelectProps {
+  /**
+   * Executes everytime when value changed
+   */
   onChange?: (e: ChangeEvent<HTMLSelectElement>) => void;
 }
 
+/**
+ * Renders an dropdown select item to select a locale
+ */
 export const LocaleSelect = ({ onChange = () => {} }: LocaleSelectProps) => {
   const router = useRouter();
 
