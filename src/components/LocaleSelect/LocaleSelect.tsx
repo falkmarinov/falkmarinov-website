@@ -5,13 +5,13 @@ interface LocaleSelectProps {
   onChange?: (e: ChangeEvent<HTMLSelectElement>) => void;
 }
 
-export const LocaleSelect = ({ onChange }: LocaleSelectProps) => {
+export const LocaleSelect = ({ onChange = () => {} }: LocaleSelectProps) => {
   const router = useRouter();
 
   const localeSelectChangeHandler: ChangeEventHandler<HTMLSelectElement> =
     async (e) => {
       await router.push('', '', { locale: e.target.value });
-      onChange && onChange(e);
+      onChange(e);
     };
 
   return (
