@@ -2,7 +2,7 @@ import { NextPage, GetStaticPropsContext } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useTranslations } from 'next-intl';
-import { useRef, ChangeEventHandler } from 'react';
+import { useRef } from 'react';
 
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { GrMail } from 'react-icons/gr';
@@ -11,6 +11,7 @@ import Typed from 'react-typed';
 
 import Title from '../components/Title';
 import LinkList from '../components/LinkList';
+import LocaleSelect from 'components/LocaleSelect';
 
 const Home: NextPage = () => {
   const router = useRouter();
@@ -50,12 +51,6 @@ const Home: NextPage = () => {
     return formattedSlogan;
   };
 
-  const localeSelectChangeHandler: ChangeEventHandler<HTMLSelectElement> =
-    async (e) => {
-      await router.push('', '', { locale: e.target.value });
-      typedRef.current.reset();
-    };
-
   return (
     <>
       <Head>
@@ -68,19 +63,11 @@ const Home: NextPage = () => {
       <main className='font-mono selection:bg-gray-300 sm:text-xl lg:text-2xl'>
         <section className='relative h-screen lg:columns-2 lg:gap-0'>
           <div className='absolute top-[3vh] right-[3vh] font-bold lg:font-normal'>
-            <select
-              defaultValue={router.locale}
-              onChange={localeSelectChangeHandler}
-              className='bg-transparent cursor-pointer'
-            >
-              {router.locales?.sort().map((locale, index) => {
-                return (
-                  <option value={locale} key={`${locale}-${index}`}>
-                    {locale.toUpperCase()}
-                  </option>
-                );
-              })}
-            </select>
+            <LocaleSelect
+              onChange={() => {
+                typedRef.current.reset();
+              }}
+            />
           </div>
           {/* left section */}
           <div className='flex items-center justify-center bg-gray-200 bg-repeat border-b-[1px] border-black lg:border-b-0 lg:border-r-[1px] h-1/2 lg:h-full bg-circuit-board'>
