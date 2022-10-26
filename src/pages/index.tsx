@@ -60,15 +60,20 @@ const Home: NextPage = () => {
         <meta name='description' content={t('description')} />
       </Head>
 
-      <main className='font-mono selection:bg-gray-300 sm:text-xl lg:text-2xl'>
-        <section className='relative h-screen lg:columns-2 lg:gap-0'>
-          <div className='absolute top-[3vh] right-[3vh] font-bold lg:font-normal'>
+      <header>
+        <nav className='fixed z-10 flex items-center justify-end w-screen font-mono font-bold sm:text-xl lg:text-2xl lg:font-normal'>
+          <div className='p-5'>
             <LocaleSelect
               onChange={() => {
                 typedRef.current.reset();
               }}
             />
           </div>
+        </nav>
+      </header>
+
+      <main className='font-mono selection:bg-gray-300 sm:text-xl lg:text-2xl'>
+        <section className='relative h-screen lg:columns-2 lg:gap-0'>
           {/* left section */}
           <div className='flex items-center justify-center bg-gray-200 bg-repeat border-b-[1px] border-black lg:border-b-0 lg:border-r-[1px] h-1/2 lg:h-full bg-circuit-board'>
             <div>
