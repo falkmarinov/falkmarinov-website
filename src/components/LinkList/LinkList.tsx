@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import cn from 'classnames';
 import useHover from 'react-use-hover';
@@ -19,6 +19,10 @@ interface LinkListItemProps {
    * URL of the link
    */
   url: string;
+  /**
+   * Function when when entering hover state
+   */
+  onHover?: () => void;
 }
 
 /**
@@ -28,13 +32,18 @@ const LinkListItem = ({
   icon = <AiOutlineLink />,
   url,
   label = url,
+  onHover = () => {},
 }: LinkListItemProps) => {
   const [isHovering, hoverProps] = useHover();
 
+  useEffect(() => {
+    isHovering && onHover();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isHovering]);
+
   return (
-    <li>
+    <li {...hoverProps}>
       <a
-        {...hoverProps}
         className='flex items-center gap-5'
         href={url}
         target='_blank'
@@ -60,12 +69,19 @@ interface LinkListProps {
    * List of links and their icons and labels
    */
   linkItems: LinkListItemProps[];
+  /**
+   * Function when when entering hover state
+   */
+  onRowHover?: (index: number) => void;
 }
 
 /**
  * Render a list of links with their icons and labels
  */
-export const LinkList = ({ linkItems }: LinkListProps) => {
+export const LinkList = ({
+  linkItems,
+  onRowHover = () => {},
+}: LinkListProps) => {
   return (
     <ol className='flex flex-col gap-5'>
       {linkItems.map(({ icon, label, url }, index) => {
@@ -75,6 +91,9 @@ export const LinkList = ({ linkItems }: LinkListProps) => {
             icon={icon}
             label={label}
             url={url}
+            onHover={() => {
+              onRowHover(index);
+            }}
           />
         );
       })}
