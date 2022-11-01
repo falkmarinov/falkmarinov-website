@@ -20,9 +20,9 @@ interface LinkListItemProps {
    */
   url: string;
   /**
-   * Function when when entering hover state
+   * Gets called when on enter and on leave
    */
-  onHover?: () => void;
+  onHover?: (isHovering: boolean) => void;
 }
 
 /**
@@ -37,7 +37,7 @@ const LinkListItem = ({
   const [isHovering, hoverProps] = useHover();
 
   useEffect(() => {
-    isHovering && onHover();
+    onHover(isHovering);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isHovering]);
 
@@ -70,9 +70,9 @@ interface LinkListProps {
    */
   linkItems: LinkListItemProps[];
   /**
-   * Function when when entering hover state
+   * Gets called when on enter and on leave
    */
-  onRowHover?: (index: number) => void;
+  onRowHover?: (index: number | undefined) => void;
 }
 
 /**
@@ -91,8 +91,8 @@ export const LinkList = ({
             icon={icon}
             label={label}
             url={url}
-            onHover={() => {
-              onRowHover(index);
+            onHover={(isHovering: boolean) => {
+              isHovering ? onRowHover(index) : onRowHover(undefined);
             }}
           />
         );
