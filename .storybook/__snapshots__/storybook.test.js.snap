@@ -101,12 +101,13 @@ exports[`Storyshots Component/LinkList Default 1`] = `
 <ol
   className="flex flex-col gap-5"
 >
-  <li>
+  <li
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
     <a
       className="flex items-center gap-5"
       href="https://example.com/"
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
       rel="noopener noreferrer"
       target="_blank"
     >
@@ -144,12 +145,13 @@ exports[`Storyshots Component/LinkList Default 1`] = `
       </div>
     </a>
   </li>
-  <li>
+  <li
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
     <a
       className="flex items-center gap-5"
       href="https://example.com/"
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
       rel="noopener noreferrer"
       target="_blank"
     >
@@ -187,12 +189,13 @@ exports[`Storyshots Component/LinkList Default 1`] = `
       </div>
     </a>
   </li>
-  <li>
+  <li
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
     <a
       className="flex items-center gap-5"
       href="https://example.com/"
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
       rel="noopener noreferrer"
       target="_blank"
     >
@@ -237,12 +240,13 @@ exports[`Storyshots Component/LinkList With Icon 1`] = `
 <ol
   className="flex flex-col gap-5"
 >
-  <li>
+  <li
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
     <a
       className="flex items-center gap-5"
       href="https://example.com/"
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
       rel="noopener noreferrer"
       target="_blank"
     >
@@ -280,12 +284,13 @@ exports[`Storyshots Component/LinkList With Icon 1`] = `
       </div>
     </a>
   </li>
-  <li>
+  <li
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
     <a
       className="flex items-center gap-5"
       href="https://example.com/"
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
       rel="noopener noreferrer"
       target="_blank"
     >
@@ -323,12 +328,13 @@ exports[`Storyshots Component/LinkList With Icon 1`] = `
       </div>
     </a>
   </li>
-  <li>
+  <li
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
     <a
       className="flex items-center gap-5"
       href="https://example.com/"
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
       rel="noopener noreferrer"
       target="_blank"
     >
@@ -373,12 +379,13 @@ exports[`Storyshots Component/LinkList With Label 1`] = `
 <ol
   className="flex flex-col gap-5"
 >
-  <li>
+  <li
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
     <a
       className="flex items-center gap-5"
       href="https://example.com/"
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
       rel="noopener noreferrer"
       target="_blank"
     >
@@ -416,12 +423,13 @@ exports[`Storyshots Component/LinkList With Label 1`] = `
       </div>
     </a>
   </li>
-  <li>
+  <li
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
     <a
       className="flex items-center gap-5"
       href="https://example.com/"
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
       rel="noopener noreferrer"
       target="_blank"
     >
@@ -459,12 +467,13 @@ exports[`Storyshots Component/LinkList With Label 1`] = `
       </div>
     </a>
   </li>
-  <li>
+  <li
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
     <a
       className="flex items-center gap-5"
       href="https://example.com/"
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
       rel="noopener noreferrer"
       target="_blank"
     >
