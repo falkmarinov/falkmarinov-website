@@ -2,11 +2,11 @@ import { NextPage, GetStaticPropsContext } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useTranslations } from 'next-intl';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
-import { GrMail } from 'react-icons/gr';
-import { BsFillPersonFill } from 'react-icons/bs';
+import { MdMail } from 'react-icons/md';
+import { BsFillPersonFill, BsPersonFill } from 'react-icons/bs';
 import Typed from 'react-typed';
 
 import Title from '../components/Title';
@@ -14,13 +14,16 @@ import LinkList from '../components/LinkList';
 import LocaleSelect from 'components/LocaleSelect';
 
 const Home: NextPage = () => {
+  const [hoveredLinkListRow, setHoveredLinkListRow] =
+    useState<number | undefined>(undefined);
+
   const router = useRouter();
   const t = useTranslations('Index');
   const typedRef = useRef<any>(null);
 
   const links = [
     {
-      icon: <BsFillPersonFill key={'0-person-icon'} />,
+      icon: <BsFillPersonFill key={'0-links-person-icon'} />,
       label: t('personal-resume'),
       url:
         router.locale === 'de'
@@ -28,17 +31,17 @@ const Home: NextPage = () => {
           : '/documents/personal-resume-english.pdf',
     },
     {
-      icon: <GrMail key={'1-mail-icon'} />,
+      icon: <MdMail key={'1-links-mail-icon'} />,
       label: 'mail@falkmarinov.de',
       url: 'mailto:mail@falkmarinov.de',
     },
     {
-      icon: <FaLinkedinIn key={'2-linkedin-icon'} />,
+      icon: <FaLinkedinIn key={'2-links-linkedin-icon'} />,
       label: '/falkmarinov',
       url: 'https://www.linkedin.com/in/falkmarinov',
     },
     {
-      icon: <FaGithub key={'3-person-icon'} />,
+      icon: <FaGithub key={'3-links-person-icon'} />,
       label: '/falkmarinov',
       url: 'https://github.com/falkmarinov',
     },
@@ -96,8 +99,36 @@ const Home: NextPage = () => {
             </div>
           </div>
           {/* right section */}
-          <div className='flex items-center justify-center border-t-[1px] border-black lg:border-t-0 lg:border-l-[1px] h-1/2 lg:h-full bg-gray-50'>
-            <LinkList linkItems={links} />
+          <div className='relative flex items-center justify-center border-t-[1px] border-black lg:border-t-0 lg:border-l-[1px] h-1/2 lg:h-full bg-gray-50'>
+            <div className='z-20'>
+              <LinkList
+                linkItems={links}
+                onRowHover={(index: number | undefined) => {
+                  setHoveredLinkListRow(index);
+                }}
+              />
+            </div>
+            <div className='absolute z-10 flex items-center justify-center w-2/3 h-2/3'>
+              {typeof hoveredLinkListRow === 'number' &&
+                [
+                  <BsFillPersonFill
+                    key={'0-listhover-person-icon'}
+                    className='w-full h-full text-gray-100'
+                  />,
+                  <MdMail
+                    key={'1-listhover-mail-icon'}
+                    className='w-full h-full text-gray-100'
+                  />,
+                  <FaLinkedinIn
+                    key={'2-listhover-linkedin-icon'}
+                    className='w-full h-full text-gray-100'
+                  />,
+                  <FaGithub
+                    key={'3-listhover-person-icon'}
+                    className='w-full h-full text-gray-100'
+                  />,
+                ][hoveredLinkListRow]}
+            </div>
           </div>
         </section>
       </main>
