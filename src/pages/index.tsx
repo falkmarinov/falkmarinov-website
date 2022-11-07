@@ -12,6 +12,7 @@ import Typed from 'react-typed';
 import Title from '../components/Title';
 import LinkList from '../components/LinkList';
 import LocaleSelect from 'components/LocaleSelect';
+import { LinkListItemProps } from 'components/LinkList/LinkList';
 
 const Home: NextPage = () => {
   const [hoveredLinkListRow, setHoveredLinkListRow] =
@@ -21,7 +22,7 @@ const Home: NextPage = () => {
   const t = useTranslations('Index');
   const typedRef = useRef<any>(null);
 
-  const links = [
+  const links: LinkListItemProps[] = [
     {
       icon: <BsFillPersonFill key={'0-links-person-icon'} />,
       label: t('personal-resume'),

@@ -6,7 +6,7 @@ import { AiOutlineLink } from 'react-icons/ai';
 
 import Character from '../Character';
 
-interface LinkListItemProps {
+export interface LinkListItemProps {
   /**
    * Icon of the URL
    */
